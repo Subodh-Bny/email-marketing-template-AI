@@ -50,13 +50,15 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="bg-white shadow-md relative">
+    <nav className="bg-white shadow-lg relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 flex items-center">
-              <Layers className="h-8 w-8 text-blue-600" />
-              <span className="ml-2 text-xl font-bold text-gray-900">Logo</span>
+              <Layers className="h-8 w-8 text-purple-600" />
+              <span className="ml-2 text-2xl font-bold text-gray-900">
+                Blink
+              </span>
             </Link>
           </div>
           <div className="hidden md:flex items-center space-x-4">
