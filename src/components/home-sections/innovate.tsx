@@ -6,7 +6,7 @@ import Image from "next/image";
 const Innovate = () => {
   return (
     <SectionContainer className="place-items-center ">
-      <div className="space-y-4">
+      <div className="space-y-6">
         <Miniheading>Innovate</Miniheading>
         <Heading>Revolutionize Your Email Marketing with AI</Heading>
         <p>
@@ -22,6 +22,7 @@ const Innovate = () => {
         height={400}
         width={400}
         alt="innovation"
+        className="w-72 md:w-96"
       />
     </SectionContainer>
   );
