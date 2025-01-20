@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
-import Empower from "@/sections/empower";
-import Innovate from "@/sections/innovate";
+import Empower from "@/components/home-sections/empower";
+import Innovate from "@/components/home-sections/innovate";
 import { ArrowBigUpDash, ChevronRight, Hourglass, Rewind } from "lucide-react";
 import Image from "next/image";
 
