@@ -1,0 +1,77 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+enum Role {
+  User
+  Admin
+}
+
+model Users {
+  id        Int         @id @default(autoincrement())
+  name      String
+  email     String      @unique
+  password  String
+  role      Role        @default(User)
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+  campaigns Campaigns[]
+  templates Template[]
+}
+
+enum CampaignStatus {
+  Draft
+  Scheduled
+  Sent
+}
+
+model Campaigns {
+  id          Int            @id @default(autoincrement())
+  name        String
+  userId      Int
+  user        Users          @relation(fields: [userId], references: [id])
+  status      CampaignStatus
+  scheduledAt DateTime
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+  templateId  Int
+  template    Template       @relation(fields: [templateId], references: [id])
+  Email       Email[]
+}
+
+model Template {
+  id        Int         @id @default(autoincrement())
+  name      String
+  userId    Int
+  user      Users       @relation(fields: [userId], references: [id])
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+  content   String
+  Campaign  Campaigns[]
+  Email     Email[]
+}
+
+enum EmailStatus {
+  Pending
+  Sent
+  Failed
+}
+
+model Email {
+  id             Int         @id @default(autoincrement())
+  campaignId     Int
+  campaign       Campaigns   @relation(fields: [campaignId], references: [id])
+  templateId     Int         @unique
+  template       Template    @relation(fields: [templateId], references: [id])
+  recipeintEmail String
+  status         EmailStatus @default(Pending)
+  sentAt         DateTime    @default(now())
+  createdAt      DateTime    @default(now())
+  updatedAt      DateTime    @updatedAt
+}
