@@ -1,5 +1,5 @@
 export const Miniheading = ({ children }: { children: React.ReactNode }) => {
-  return <h3 className="font-bold md:text-2xl text-gray-200">{children}</h3>;
+  return <h3 className="font-bold md:text-2xl ">{children}</h3>;
 };
 
 export const Heading = ({ children }: { children: React.ReactNode }) => {
