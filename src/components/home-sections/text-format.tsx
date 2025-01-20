@@ -3,7 +3,7 @@ export const Miniheading = ({ children }: { children: React.ReactNode }) => {
 };
 
 export const Heading = ({ children }: { children: React.ReactNode }) => {
-  return <h1 className="font-bold text-4xl">{children}</h1>;
+  return <h1 className="font-bold text-5xl">{children}</h1>;
 };
 
 export const SubHeading = ({ children }: { children: React.ReactNode }) => {

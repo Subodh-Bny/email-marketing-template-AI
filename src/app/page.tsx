@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
 import Empower from "@/components/home-sections/empower";
 import Innovate from "@/components/home-sections/innovate";
-import { ArrowBigUpDash, ChevronRight, Hourglass, Rewind } from "lucide-react";
 import Image from "next/image";
+import Features from "@/components/home-sections/features";
 
 export default function Home() {
   return (
@@ -34,12 +34,13 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Empower */}
       <Empower />
-
       {/* Innovate */}
       <Innovate />
+
+      {/* Features */}
+      <Features />
     </>
   );
 }
