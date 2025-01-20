@@ -3,6 +3,7 @@ import Empower from "@/components/home-sections/empower";
 import Innovate from "@/components/home-sections/innovate";
 import Image from "next/image";
 import Features from "@/components/home-sections/features";
+import GetStartedButton from "@/components/home-sections/get-started";
 
 export default function Home() {
   return (
@@ -27,7 +28,7 @@ export default function Home() {
           </p>
 
           <div className="space-x-4">
-            <Button>Get Started</Button>
+            <GetStartedButton variant={"default"} />
             <Button variant={"outline"} className="bg-transparent ">
               Learn More
             </Button>

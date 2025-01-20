@@ -1,9 +1,10 @@
 import React from "react";
 import { ArrowBigUpDash, ChevronRight, Rewind } from "lucide-react";
-import { Heading, Miniheading, SubHeading } from "./text-format";
+import { Content, Heading, Miniheading, SubHeading } from "./text-format";
 
 import { Button } from "@/components/ui/button";
 import SectionContainer from "./section-container";
+import GetStartedButton from "./get-started";
 
 const Empower = () => {
   return (
@@ -13,30 +14,30 @@ const Empower = () => {
         <Heading>Unlock Your Email Marketing Potential with AI</Heading>
       </div>
       <div className="space-y-4 py-4">
-        <p>
+        <Content>
           Revolutionize your email marketing strategy with our AI-driven app.
           Save time, boost efficiency, and enhance your email performance
           effortlessly.
-        </p>
+        </Content>
         <div className="space-y-4">
           <div className="space-y-3">
-            <Rewind size={30} className="font-bold" />
+            <Rewind size={30} className="font-bold mx-auto md:mx-0" />
             <SubHeading>Time-Saving</SubHeading>
-            <p>
+            <Content>
               Automate your email tasks and focus on what truly matters for your
               business.
-            </p>
+            </Content>
           </div>
           <div className="space-y-3">
-            <ArrowBigUpDash size={40} className="font-bold" />
+            <ArrowBigUpDash size={40} className="font-bold mx-auto md:mx-0" />
             <SubHeading>Increased Efficiency</SubHeading>
-            <p>
+            <Content>
               Streamline your workflow and achieve more in less time with our
               smart solutions
-            </p>
+            </Content>
           </div>
-          <div className="space-x-3">
-            <Button>Get Started</Button>
+          <div className="flex  gap-2 justify-center md:justify-start">
+            <GetStartedButton />
             <Button variant={"ghost"}>
               Signup <ChevronRight />
             </Button>

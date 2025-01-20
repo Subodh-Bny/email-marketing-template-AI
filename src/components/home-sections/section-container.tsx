@@ -11,7 +11,7 @@ const SectionContainer = ({
   return (
     <section
       className={cn(
-        "py-8 px-2 max-w-6xl mx-auto md:grid grid-cols-2",
+        "py-8 px-2 max-w-6xl mx-auto md:grid grid-cols-2 gap-7",
         className
       )}
     >
