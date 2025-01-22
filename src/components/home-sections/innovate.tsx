@@ -18,7 +18,7 @@ const Innovate = () => {
       </div>
 
       <Image
-        src={"/assets/innovation.svg"}
+        src={"/assets/landing/innovation.svg"}
         height={400}
         width={400}
         alt="innovation"

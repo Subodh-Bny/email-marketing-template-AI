@@ -11,7 +11,7 @@ export default function Home() {
       <section className="relative min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-screen flex items-center justify-center h-screen">
         <div className="relative z-10 text-center  px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
           <Image
-            src="/assets/airplane-line.svg"
+            src="/assets/landing/airplane-line.svg"
             height={400}
             width={400}
             alt="paper airplane line"
